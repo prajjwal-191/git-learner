@@ -1,0 +1,16 @@
+steps to set up your github
+i.    cretae an github account and remember its password
+ii.   go to profile icon and go to your repositories
+iii.  create new repository with any name (then you will get two urls https and ssh so firstly lets see how to use https for configuration)
+iv.   copy https url.
+
+steps to upload your local repo to remote repo (github)
+go to terminal and go to directory where your local repo is present (by using cd ~/path to your local repo)
+git remote add origin https_url_of_your_remote_repo (this command linked our local repo to remote repo. here origin is nickname of remote repo and http url is thatone which you copied while creating remote repo )
+git remote (to see what are all the remote repo linked to current local repo)
+git remote -v (to see what are all remote repo linked to current local repo as well as details about it )
+git remote remove nickname_of_repo(one local repo can be linked to multiple remote repo and if we want to unlink it with a remote repo use this command)
+
+Pushing local repo in github repo
+git config --global credential.username "enter_the_username configured in the git (if you forget use command git config --global --list)"
+git push nickname_of_repo branch_name (you can push one branch of commit at once so give the branch name that you want to push. now it will say to sign up in github so remember your github password and as soon as you enter it the local repo will be pushed to remote repo)
