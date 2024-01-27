@@ -1,5 +1,5 @@
 steps to set up your github
-i.    cretae an github account and remember its password
+i.    create an github account and remember its password
 ii.   go to profile icon and go to your repositories
 iii.  create new repository with any name (then you will get two urls https and ssh so firstly lets see how to use https for configuration)
 iv.   copy https url.
@@ -14,3 +14,12 @@ git remote remove nickname_of_repo(one local repo can be linked to multiple remo
 Pushing local repo in github repo
 git config --global credential.username "enter_the_username configured in the git (if you forget use command git config --global --list)"
 git push nickname_of_repo branch_name (you can push one branch of commit at once so give the branch name that you want to push. now it will say to sign up in github so remember your github password and as soon as you enter it the local repo will be pushed to remote repo)
+
+after pushing local repo to remote repo(github) you can see terminal with command git log --all --graph and we can observe that head/branch_name/nickname_of_repo all will be at same commit.
+
+How to update latest commit on local repo to remote repo 
+i.   change data on your local repo 
+ii.  stage it and commit it
+iii. now git log --all --graph will show that head and branch_name is pointing to latest commit but nickname_of_repo is pointing to previous commit because in remote frepo that is the latest commit
+iv.  git push nickname_of_repo branch_name (this will push latest commit in remote remo and then both local and remote repo will be synced)
+v.   we can verify it by doing git log --all --graph and we can see that all head/branch_name/nickname_of_repo all will be at same commit.
